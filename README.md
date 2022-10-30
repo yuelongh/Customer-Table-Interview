@@ -15,7 +15,7 @@ https://nodejs.org/dist/v18.12.0/node-v18.12.0-x64.msi
 
 1) Open the folder
 2) If using Windows double-click ClickMe(Windows).bat
-3) If using Mac/Linux double-click ClickMe(Mac Linux).sh
+3) If using Mac/Linux open terminal and ``` sh file_folder/ClickMe(Mac Linux).sh ```
 4) Enter preferred port number in prompt input or leave it blank (It will automatically use default port 5000)
 5) Please allow some time for it to download all packages, compile and load the app.
 6) Once the server is up running please open the app by using the following link     http://localhost:5000/ (Please do change port number if not using default port 5000)
