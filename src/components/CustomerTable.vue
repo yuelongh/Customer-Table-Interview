@@ -127,6 +127,11 @@
           </td>
         </tr>
       </table>
+      <h3>
+        * Click
+        <font-awesome-icon icon="fa-user" size="1x" />
+        to see detail of the user
+      </h3>
     </div>
     <div id="error_msg" v-else>
       <h4>Error Occurred When Fetching Customers Information From API</h4>

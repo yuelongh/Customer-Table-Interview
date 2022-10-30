@@ -1,5 +1,5 @@
-read -p "Have you installed Node.js and npm? (Hit Enter to continue)"
-read -p "Enter Port Number (Leave It Blank For Using Default Port 5000): " port
+read -p "Have you installed Node.js and npm? (Hit enter to continue)"
+read -p "Enter Port Number (Leave it blank for using default port 5000): " port
 port=${port:-5000}
 echo $name
 echo It will use Port $port
