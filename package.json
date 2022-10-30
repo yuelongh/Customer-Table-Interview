@@ -5,6 +5,7 @@
     "dev": "vite",
     "build": "vue-tsc --noEmit && vite build",
     "one_btn": "npm install && npm run build && vite preview --port 5000 --host",
+    "use_click_me": "npm install && npm run build && vite preview --host --port",
     "typecheck": "vue-tsc --noEmit",
     "lint": "eslint . --ext .vue,.js,.jsx,.cjs,.mjs,.ts,.tsx,.cts,.mts --fix --ignore-path .gitignore"
   },
