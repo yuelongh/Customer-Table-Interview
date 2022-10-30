@@ -1,5 +1,6 @@
 <template>
   <main>
+    <h1 class="header">Customer Information Table</h1>
     <customer-table />
   </main>
 </template>
@@ -13,7 +14,10 @@ import CustomerTable from "@/components/CustomerTable.vue";
 @import "../node_modules/@fortawesome/fontawesome-free/css/all.min.css";
 
 main {
-  margin: 20% 0;
+  margin: 10% 0;
+  h1.header {
+    text-align: center;
+  }
 }
 
 .icon {

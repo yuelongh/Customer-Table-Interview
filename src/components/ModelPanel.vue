@@ -49,9 +49,9 @@ const props = defineProps({
   .modal-content {
     border-radius: 20px;
     background-color: #fefefe;
-    margin: 20% auto 20% auto;
+    margin: 20% auto;
     border: 1px solid #888;
-    width: 60%;
+    width: 95%;
     padding: 0 1%;
 
     > .header {

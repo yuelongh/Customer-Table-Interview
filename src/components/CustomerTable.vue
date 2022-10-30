@@ -128,9 +128,14 @@
         </tr>
       </table>
       <h3>
-        * Click
+        Click
+        <font-awesome-icon icon="fa-sort" size="1x" />
+        to sort the order
+      </h3>
+      <h3>
+        Click
         <font-awesome-icon icon="fa-user" size="1x" />
-        to see detail of the user
+        to see customer details
       </h3>
     </div>
     <div id="error_msg" v-else>
@@ -236,7 +241,7 @@ const variables = ref<{
 }>({
   search_box_input: "",
   customer_info_list: [],
-  customer_info_fetch_error_message: [],
+  customer_info_fetch_error_message: ["sdfsdf"],
   current_user_details: null,
   sort: {
     id: 0,
@@ -337,7 +342,7 @@ async function fetch_all_customers_info() {
 
   /*** Fetch customer info list from the API ***/
   let current_page_number = 1;
-  console.log(current_page_number);
+  // console.log(current_page_number);
   /*** Tell user that I am busy ***/
   start_loading_spinner();
 
@@ -410,10 +415,10 @@ function sort_customer_info_list(customer_info_list: CustomerInfoType[]) {
        * sort_type is 1 (Ascending) then it should return 1 (R is greater than G, so George and Rachel should swap so return 1)
        * sort_type is 2 (Descending) then it should return -1 (R is greater than G, but we need descending order so -1 mean it does not need swap)
        * ***/
-      console.log(
-        `${customer_a[sort_by]} >${customer_b[sort_by]}`,
-        sort_type === 1 ? 1 : -1
-      );
+      // console.log(
+      //   `${customer_a[sort_by]} >${customer_b[sort_by]}`,
+      //   sort_type === 1 ? 1 : -1
+      // );
       return sort_type === 1 ? 1 : -1;
     } else if (customer_a[sort_by] < customer_b[sort_by]) {
       /***
@@ -423,13 +428,13 @@ function sort_customer_info_list(customer_info_list: CustomerInfoType[]) {
        * sort_type is 2 (Descending) then it should return 1 (R is less than G which is true but we want the order the other way round so it needs to swap again)
        * ***/
 
-      console.log(
-        `${customer_a[sort_by]} <${customer_b[sort_by]}`,
-        sort_type === 1 ? -1 : 1
-      );
+      // console.log(
+      //   `${customer_a[sort_by]} <${customer_b[sort_by]}`,
+      //   sort_type === 1 ? -1 : 1
+      // );
       return sort_type === 1 ? -1 : 1;
     } else {
-      console.log(customer_a[sort_by], customer_b[sort_by]);
+      // console.log(customer_a[sort_by], customer_b[sort_by]);
       /**** no need to do anything because the name is same  ****/
       return 0;
     }
@@ -485,6 +490,8 @@ onBeforeMount(async () => {
 }
 
 #error_msg {
+  //text-align: center;
+  margin: auto 20%;
   * {
     color: red;
   }
